@@ -6,7 +6,7 @@ defmodule Spectre.Wallet.Stock do
     field :code, :string
     field :name, :string
     field :price, :float
-    many_to_many :stockgroups, Spectre.Wallet.Stocks, join_through: "stockgroups_stocks"
+    many_to_many :stockgroups, Spectre.Wallet.Stock, join_through: "stockgroups_stocks"
     timestamps()
   end
 

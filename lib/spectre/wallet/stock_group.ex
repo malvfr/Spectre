@@ -5,7 +5,7 @@ defmodule Spectre.Wallet.StockGroup do
   schema "stockgroups" do
     field :name, :string
     belongs_to :user, EctoAssoc.User
-    many_to_many :stocks, Spectre.Wallet.Stocks, join_through: "stockgroups_stocks"
+    many_to_many :stocks, Spectre.Wallet.Stock, join_through: "stockgroups_stocks"
     timestamps()
   end
 
